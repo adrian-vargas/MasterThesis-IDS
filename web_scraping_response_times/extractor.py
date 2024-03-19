@@ -3,19 +3,14 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import datetime
 
-# Directorio que contiene los archivos HTML
-# Obtiene la ruta del directorio del script actual
+# Directorio que contiene los archivos HTML: obtiene la ruta del directorio del script actual
 directory = os.path.dirname(os.path.abspath(__file__))
-
-# Combina el directorio del script con el nombre de la subcarpeta
-#directory = os.path.join(script_directory, 'web_scraping_response_times')
 
 # Verifica si el directorio existe
 if os.path.exists(directory):
     print(f"El directorio '{directory}' existe.")
 else:
     print(f"El directorio '{directory}' no existe.")
-#directory = 'C:\\Users\\adriv\\Downloads\\web scrapping'
 
 # Nombre del archivo Excel de salida
 output_excel_file = 'all_response_times.xlsx'
